@@ -77,4 +77,6 @@ Most likely this is an option: `<command> --help`
 - Use `<command> --help` to find help information.
 - Serval commands: `pwd`, `ls`, `cd`, `mkdir`, `cp`, `mv`, etc...
 
-![](./imgs/covid.jpg)
+<p align="center">
+<img src="./imgs/covid.jpg"/>
+</p>
