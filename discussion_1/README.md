@@ -61,32 +61,37 @@ Commands has the form `<command> [args*]`, most likely this is an option: `<comm
 - Path: a string that tells your system how to negavite through your file system.
   - Relative path: relative to current directory.
     - `.` is the current directory, `..` is the parent directory.
-  - Absolute path: starts with `/`
+  - Absolute path: **starts with `/`**
   - HOME: `~`, the default location you will be when starting a shell. It's like Desktop in GUI's sense.
     - Windows: `~` = `/c/Users/<username>/`
     - Linux: `~` = `/home/<username>/`
-    - Mac: I am not sure :)
+    - Mac: `~` = `/User/<username>/`
   - Examples:
     - `~/OneDrive/CurrentWork`
     - `/c/Users/Peter/` (Don't use Windows' path `C:\Users\Peter` in bash, it's not recognized.)
     - `./hw0-master`
-    - `../../CurrentWork`
+    - `./../../CurrentWork`
     - `../hw0-master/././`
+- **Bash in Mac, Linux, and WSL(Windows Subsystem for Linux) is case sensitive**.
 
 ## Directories
-`pwd`: Print the path of the current working directory.
-`ls`: List information about the FILEs (the current directory by default).
-`cd`: Change directory, if no argument specified, goes to HOME.
-`mkdir`: Make directory.
+- `pwd`: Print the path of the current working directory.
+- `ls ...`: List information about the FILEs (the current - directory by default).
+  - `ls` shows current directory
+  - `ls <path>` shows anything inside `<path>`
+- `cd`: Change directory
+  - `cd` goes to HOME
+  - `cd <path>` goes to `<path>`, if it exists.
+- `mkdir <path>`: Make directory.
 <p align="center">
 <img src="./imgs/dirs.png" width = 50%/>
 </p>
 
 
 ## Files
-- `rm`: Remove, add `-r` to remove a directory.
-- `cp`: Copy, add `-r` to copy a directory.
-- `mv`: Move. You can move a file to it's current location with a new name to rename, so there is no command for rename.
+- `rm <file>`: Remove, add `-r` to remove a directory.
+- `cp <file_0> <file_1>`: Copy, add `-r` to copy a directory.
+- `mv <file_0> <file_1>`: Move. You can move a file to it's current location with a new name to rename, so there is no command for rename.
 <p align="center">
 <img src="./imgs/files.png" width = 50%/>
 </p>
@@ -95,7 +100,7 @@ Commands has the form `<command> [args*]`, most likely this is an option: `<comm
 
 - `clear`: Clear your bash.
 - `history`: Show your previous commands.
-- `git`: Version control. `git clone` is basically downloading something, with few more extra things you don't need to worry about.
+- `git ...`: Version control. `git clone` is basically downloading something, with few more extra things you don't need to worry about.
 - `python3` / `python`
 - `exit`: Quit current bash.
 
@@ -107,7 +112,7 @@ Commands has the form `<command> [args*]`, most likely this is an option: `<comm
 # Quick tips
 
 - Use `Tab` to auto-fill your command. Doublt `Tab` to show all possible ways to fill it.
-- `Ctrl + C` terminates current command, `Ctrl + Shift + C/V` is copy/paste.
+- `Ctrl + C` terminates current command if it halts, `Ctrl + Shift + C/V` is copy/paste.
 - `Ctrl + R` to search previous commands.
 - Use `left/right` to move cursor by a character, use `Ctrl + left/right` to move cursor by a word, **use `up/down` to show previous commands**.
 
