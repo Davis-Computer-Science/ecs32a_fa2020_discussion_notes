@@ -34,7 +34,7 @@ Note: some functions have no parameter and some have no return value.
 - `min() / max()`
   - returns the minimal/maximal value in a container.
   - when called with a string, it returns a character with minimal/maximal ASCII code.
-  - Note: `ord()/chr()`: I check the doc of these two functions and in fact they returns the Unicode/character. Unicode is an extension of ASCII and gives almost each charater in the world a code(a number) to represent it. And a good point is that for each character in ASCII table, its Unicode is the same as its ASCII code.
+  - Note: `ord()/chr()`: I checked the doc of these two functions and in fact they returns the Unicode/character. Unicode is an extension of ASCII and gives almost each charater in the world a code(a number) to represent it. And a good point is that for each character in ASCII table, its Unicode is the same as its ASCII code.
 - `sum()` 
   - returns the sum of a list.
   - a syntactic sugar: `[]` can be removed when summing a list. For example, `sum(i ** 2 for i in range(10))` == `sum([i ** 2 for i in range(10)])`
