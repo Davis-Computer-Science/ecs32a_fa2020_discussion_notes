@@ -34,6 +34,7 @@ Note: some functions have no parameter and some have no return value.
 - `min() / max()`
   - returns the minimal/maximal value in a container.
   - when called with a string, it returns a character with minimal/maximal ASCII code.
+  - Note: `ord()/chr()`: I check the doc of these two functions and in fact they returns the Unicode/character. Unicode is an extension of ASCII and gives almost each charater in the world a code(a number) to represent it. And a good point is that for each character in ASCII table, its Unicode is the same as its ASCII code.
 - `sum()` 
   - returns the sum of a list.
   - a syntactic sugar: `[]` can be removed when summing a list. For example, `sum(i ** 2 for i in range(10))` == `sum([i ** 2 for i in range(10)])`
@@ -49,5 +50,6 @@ Note: some functions have no parameter and some have no return value.
   - `join()` is not a function, but a method of string object.
   - `'seperator'.join(list of string)`
 - `format()`
+  - `'My name is {1}, and my age is {0}'.format(24, 'Haitian')`
 
 Read the [doc](https://docs.python.org/3/library/functions.html) to learn more about python built-in functions.
