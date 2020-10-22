@@ -1,16 +1,25 @@
 # discussion_3
 
+## Some notes on HW1
+
 <p align="center">
     <img src="./imgs/Emergency_Meeting.jpg" width = 50%/>
 </p>
-
-## Some notes on HW1
 
 ### Make sure the code you run is the code you write
 
 - It's better to "open folder" in your IDE
 - Try not to `git clone` twice if you don't understand what it means.
 - Check the top bar of your IDE and `pwd` to make sure.
+
+### Common syntax misunderstandings
+
+```python
+leviO = 1 # variable
+"leviO"   # String
+leviO = "leviO" # Assign a string to a variable
+levio == "leviO" # Test if variable has the same value as the string, gives you `True`.
+```
 
 ### leviOSA
 
@@ -26,8 +35,9 @@ assert s[-2: -1] == 'S'
 ### print_n
 
 - `range(start, stop)` does NOT include `stop`.
-- Default function argument, `range` has a `step`
+- Default function argument, `range` has a `step`.
 - `range` may produce nothing.
+- Try write it in `while` loop.
 
 ## L-value & R-value
 
@@ -50,16 +60,20 @@ a = f(2)
 ### Curse of namespace
 
 - Function names are also in the namespae
-  - If you have a variable that has the same name as a function, the function "disappears"
+  - If you have a variable that has the same name as a function, the function gets shalldowed("disappears")
   - You can "return"/"assign" a function
 - Built in namespaces can be changed, don't name your variable as names in built in name.
-  - `True, False = False, True`
-  - `list = [1, 2, 3, 4]`
+  - `list = [1, 2, 3, 4]` **DO NOT DO THIS.**
 
 [Source code](./src/scope.py)  
 [Click here to run it!](http://www.pythontutor.com/visualize.html)
 
 ## Recursion
+
+<p align="center">
+    <img src="./imgs/recursive.jpg" width = 50%/>
+</p>
+
 
 1. You know the answer the smallest scoped problem, don't forgot to write them down("Base case" according to textbook).
 2. Part of the problem is the same with a smaller scope.("Recursive case")
