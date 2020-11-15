@@ -18,7 +18,7 @@
 leviO = 1 # variable
 "leviO"   # String
 leviO = "leviO" # Assign a string to a variable
-levio == "leviO" # Test if variable has the same value as the string, gives you `True`.
+leviO == "leviO" # Test if variable has the same value as the string, gives you `True`.
 ```
 
 ### leviOSA

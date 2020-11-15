@@ -2,19 +2,21 @@
 
 ## Memorization: trade time with memory
 
-
 ## Class revisited: special methods(full list [here](https://docs.python.org/3/reference/datamodel.html#special-method-names))
 
 ## Debug and display: `__expr__` and `__str__`
 
-## Iterator: `__iter__` and `__next__`
+## Iterator & generator
+Recommended reading: [here](https://anandology.com/python-practice-book/iterators.html)
 
 - `__iter__` gives you an iterator.
-- `__next__` calls next value.
+- `__next__` calls next value on an iterator
 
-## Generator
+`yield` gets you an generator.
+
 
 ## Functional programming
+Recommended reading: [here](https://anandology.com/python-practice-book/functional-programming.html)
 
 How do we do something to a sequence(iterator)?
 
