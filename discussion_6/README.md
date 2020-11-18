@@ -1,6 +1,6 @@
-# Discussion 7
+# Discussion 6
 
-## Memorization: trade time with memory
+## Recursion memorization: trade time with memory
 
 Let's write fib again! If you have a hard time understanding recursion or fib, refer our [previous discussions](../discussion_3/README.md).
 
@@ -66,45 +66,22 @@ Links:
 - Recommended reading: [here](https://anandology.com/python-practice-book/functional-programming.html)
 - Example code [here](./src/itertools.py)
 
-How do we do something to a sequence(iterator)?
-
-```py
-for item in iterator:
-    # Do something with this item
-    # Do more things with this item
-    # ...
-    # and now this loop looks like 100+ lines long
-    # which is bug-prone and ugly and no one wants
-    # to maintain.
-```
-
-Smart ways?
-
-```py
-def do_a(item):
-    # Put your job here
-def do_b(item):
-    # Put another job
-def do_c(item):
-    # Even more jobs
-for item in iterator:
-    do_a(item)
-    do_b(item)
-    do_c(item)
-```
-
-Pro gamers' ways?
-
-```py
-jobs = [do_a, do_b, do_c]
-for item in iterator:
-    for job in jobs:
-        job(item)
-```
-
 **Function is just another type of value that if you give it required parameter, it executes**
+Therefore, you can pass a function as an argument to another function.
 
-Think of another case. 
+```py
+def add(a, b):
+    return a+b
+def sub(a, b):
+    return a-b
+def call_fn(fn, a, b):
+    return fn(a, b)
+call_fn(add, a, b)
+call_fn(sub, a, b)
+```
+
+A more concrete example.
+Suppose we have a coding requirement: given an `Object`, do different things based on it's value.
 
 ```py
 def do_something_hard(a):
@@ -127,7 +104,13 @@ def do_something_hard(a):
         do_none(a)
     else:
         do_default(a)
+```
 
+This looks nice, but then a change of requirement come.
+Then you have to change your code a lot.
+How about:
+
+```py
 def do_something_smart(a):
     '''
     See `do_something_hard(a)` for specification.
@@ -140,3 +123,4 @@ def do_something_smart(a):
         do_default(a)
 ```
 
+This changes little when your requirements changes, simply change your `things_map` and the rest is the same.
