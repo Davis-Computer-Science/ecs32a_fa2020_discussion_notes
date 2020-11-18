@@ -1,3 +1,4 @@
+# Good old fib. 
 def fib(n):
     if n <= 0:
         return 0
@@ -6,9 +7,23 @@ def fib(n):
     else:
         return fib(n-1) + fib(n-2)
 
+def fib_math(n):
+    from math import sqrt
+    if n <=0 :
+        return 0
+    if n == 1:
+        # Math is not accurate enough if n == 1
+        return 1
+    phi = (1 + sqrt(5)) / 2
+    return round((phi ** n + (1 - phi) ** n) / sqrt(5))
+
 class Fib:
+    # Use a dictionary to remember past results
     def __init__(self):
         self.history_dict = {0: 0, 1: 1}
+
+    # If the `n` is calculated before, it can be found in the dictionary.
+    # If not, calculate it and remember it for later reference.
     def fib(self, n):
         if n < 0:
             return 0
@@ -23,6 +38,8 @@ if __name__ == "__main__":
     for t in edge_tests:
         l = fib(t)
         r =  Fib().fib(t)
+        m = fib_math(t)
+        assert r == m
         assert l == r
     print("Edge tests passed!")
 
@@ -30,12 +47,14 @@ if __name__ == "__main__":
     for t in small_tests:
         l = fib(t)
         r =  Fib().fib(t)
+        m = fib_math(t)
+        assert r == m
         assert l == r
     print("Small tests passed!")
 
-    large_tests = [10, 15, 20,25, 27, 28, 29, 30, 35]
+    large_tests = [10, 15, 20,25, 27, 28, 29, 30, 35, 40]
     for t in large_tests:
-        print("\nn = {}".format(t))
+        print("\nn = {}, fib_math(n) = {}".format(t, fib_math(t)))
 
         start_time = time.time()
         r =  Fib().fib(t)
