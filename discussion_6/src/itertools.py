@@ -58,5 +58,5 @@ if __name__ == "__main__":
     odd_pls_one_lst = list(my_map(my_filter(l, is_odd), lambda i: i + 1))
     for i in odd_pls_one_lst:
         print(i)
-    total = my_fold(odd_pls_one_lst, 0, a_pls_b)
+    total = my_fold(odd_pls_one_lst, 0, a_plus_b)
     print("Total is {}".format(total))

@@ -16,10 +16,10 @@ class Person:
         return self.height
 
     def __repr__(self):
-        return "Person {{ age: {}, name: {}, happiness: {} }}".format(self.name, self.age, self.happiness)
+        return "Person {{ age: {}, name: {}, happiness: {}, height: {} }}".format(self.name, self.age, self.happiness, self.height)
 
     def __str__(self):
-        # Bad practise
+        # Bad practise, DON'T DO IT.
         self.happiness += 1
         return "Hi, I am {}, I'm not telling you my age.".format(self.name)
 

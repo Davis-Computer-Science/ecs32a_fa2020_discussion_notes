@@ -1,5 +1,10 @@
 # Discussion 6
 
+
+<p align="center">
+    <img src="./imgs/EZEliU4XYAAx2a9.jpg" width = 70%/>
+</p>
+
 ## Recursion memorization: trade time with memory
 
 Let's write fib again! If you have a hard time understanding recursion or fib, refer our [previous discussions](../discussion_3/README.md).
@@ -84,6 +89,16 @@ A more concrete example.
 Suppose we have a coding requirement: given an `Object`, do different things based on it's value.
 
 ```py
+def do_int(a):
+    pass
+def do_a(a):
+    pass
+def do_none(a):
+    pass
+def do_default(a):
+    pass
+```
+```py
 def do_something_hard(a):
     '''
     Argument:
@@ -115,9 +130,9 @@ def do_something_smart(a):
     '''
     See `do_something_hard(a)` for specification.
     '''
-    things_map = {1: do_int, None: do_none, 'a': do_a}
-    if a in things_map:
-        fn = things_map[a]
+    things_dict = {1: do_int, None: do_none, 'A': do_a}
+    if a in things_dict:
+        fn = things_dict[a]
         fn(a)
     else:
         do_default(a)
