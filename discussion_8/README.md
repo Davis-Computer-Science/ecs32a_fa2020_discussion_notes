@@ -204,3 +204,19 @@ $$\begin{pmatrix}
     -8 & 13 \\
 \end{pmatrix}
 $$
+
+**Matrix in python**
+
+In python, we can use a **list of list** to annotate a matrix
+```python
+a = [[1, 3, -5], [-2, 10, 6]]
+b = [[4, -6, 1], [3, 5, 4]]
+m = [[1, 3, 4], [-2, 4, 1]]
+n = [[3, 2], [-1, 4], [2, 1]]
+```
+
+And compute the sum and product of matrices
+```python
+>>> a_plus_b = [[a[i][j] + b[i][j] for j in range(len(a[0]))] for i in range(len(a))]
+>>> m_times_n = [[sum(m[i][k] * n[k][j] for k in range(len(m[0]))) for j in range(len(n[0]))] for i in range(len(m))]
+```
