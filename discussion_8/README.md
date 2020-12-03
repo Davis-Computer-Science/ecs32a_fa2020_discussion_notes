@@ -220,3 +220,11 @@ And compute the sum and product of matrices
 >>> a_plus_b = [[a[i][j] + b[i][j] for j in range(len(a[0]))] for i in range(len(a))]
 >>> m_times_n = [[sum(m[i][k] * n[k][j] for k in range(len(m[0]))) for j in range(len(n[0]))] for i in range(len(m))]
 ```
+
+Check whether a matrix is invalid
+```python
+>>> a = [[1], [3, 4]]
+>>> l = len(set([len(i) for i in a]))
+>>> l > 1
+True # a is invalid matrix
+```
